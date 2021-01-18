@@ -1,8 +1,8 @@
-from django.urls import path
+from django.urls import  include,path
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
-from insta import views as user_views
+from socialmedia import views as user_views
 
 
 

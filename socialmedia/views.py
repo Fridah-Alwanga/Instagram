@@ -109,6 +109,7 @@ def new_post(request):
     if request.method == 'POST':
         form = NewPostForm(request.POST, request.FILES)
         if form.is_valid():
+
             image = form.save(commit=False)
             image.user = current_user
            
@@ -118,7 +119,7 @@ def new_post(request):
 
     else:
         form = NewPostForm()
-    return render(request, 'new_post.html', {"form": form})
+    return render(request, 'new_post.html',{'form':form})
 
 
 
